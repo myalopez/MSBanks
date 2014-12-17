@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mississippi Banks Data and Statistics</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Mississippi Banks Data and Statistics">
+  <meta name="author" content="Developing Data Products Student">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Mississippi Banks Data and Statistics</h1>
+    <h2>Banks' Metrics</h2>
+    <p>Developing Data Products Student<br/>Course Project December, 2014</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Mississippi Banks Data Products and Statistics</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Application Description:</p>
+
+<p>This application provides an interactive way of 
+determining the financial health of the banks in
+Mississippi. Descriptive statistics are displayed
+based on areas of specialization chosen by the
+user. Furthermore, the user can display the raw
+data for all the banks in each area of specialization
+based on the number of observations specified by the user.</p>
+
+<p>Data Source: Federal Deposit Insurance Corporation at 
+<a href="https://www.fdic.gov/bank/statistical/">https://www.fdic.gov/bank/statistical/</a> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Mississippi Banks Data Products and Statistics</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The summary statistics are calculated for the 
+following financial data:</p>
+
+<ul>
+<li>Total Assets (ASSETS), Millions $</li>
+<li>Total Deposits (DEPOSITS), Millions $</li>
+<li>Equity Capital (EQUITY), Millions $</li>
+<li>Return on Assets (ROA)</li>
+<li>Return on Equity(ROE)</li>
+</ul>
+
+<p>In addition to the &quot;All Banks&quot; option, other Areas of Specialization are:</p>
+
+<ul>
+<li>Agricultural</li>
+<li>Commercial Lending</li>
+<li>Mortgage</li>
+<li>Other Specialized Lending &lt; 1 Billion</li>
+<li>All Other &lt; 1 Billion</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Mississippi Banks Data Products and Statistics</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Sample Output for the &quot;Commercial Lending Banks&quot; (ASSETS, DEPOSITS and EQUITY, in million $)</p>
+
+<pre><code>##      ASSETS            DEPOSITS            EQUITY        
+##  Min.   :   47.83   Min.   :   42.18   Min.   :   5.347  
+##  1st Qu.:  194.20   1st Qu.:  162.61   1st Qu.:  20.950  
+##  Median :  317.98   Median :  260.25   Median :  33.141  
+##  Mean   : 1391.96   Mean   : 1127.79   Mean   : 165.108  
+##  3rd Qu.:  683.34   3rd Qu.:  593.81   3rd Qu.:  68.918  
+##  Max.   :19870.44   Max.   :15820.80   Max.   :2465.076  
+##       ROA               ROE        
+##  Min.   :-0.8700   Min.   :-7.690  
+##  1st Qu.: 0.7550   1st Qu.: 6.885  
+##  Median : 0.9300   Median : 8.720  
+##  Mean   : 0.9653   Mean   : 9.174  
+##  3rd Qu.: 1.2200   3rd Qu.:11.460  
+##  Max.   : 2.3600   Max.   :22.960
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h3>Mississippi Banks Data Products and Statistics</h3>
+  </hgroup>
+  <article data-timings="">
+    <p>Future Enhancements:</p>
+
+<ul>
+<li>Add another widget that will allow users to
+search and choose individual bank&#39;s data to display</li>
+<li>Add another widget that will allow users to
+choose dates of FDIC data reporting</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Mississippi Banks Data Products and Statistics'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Mississippi Banks Data Products and Statistics'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Mississippi Banks Data Products and Statistics'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Mississippi Banks Data Products and Statistics'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>

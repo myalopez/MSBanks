@@ -1,0 +1,94 @@
+---
+title       : Mississippi Banks Data and Statistics
+subtitle    : Banks' Metrics
+author      : Developing Data Products Student
+job         : Course Project December, 2014
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+
+--- .class #id 
+
+## Mississippi Banks Data Products and Statistics
+
+Application Description:
+
+This application provides an interactive way of 
+determining the financial health of the banks in
+Mississippi. Descriptive statistics are displayed
+based on areas of specialization chosen by the
+user. Furthermore, the user can display the raw
+data for all the banks in each area of specialization
+based on the number of observations specified by the user.
+
+Data Source: Federal Deposit Insurance Corporation at 
+https://www.fdic.gov/bank/statistical/ 
+
+
+--- .class #id 
+
+## Mississippi Banks Data Products and Statistics
+
+The summary statistics are calculated for the 
+following financial data:
+
+- Total Assets (ASSETS), Millions $
+- Total Deposits (DEPOSITS), Millions $
+- Equity Capital (EQUITY), Millions $
+- Return on Assets (ROA)
+- Return on Equity(ROE)
+
+In addition to the "All Banks" option, other Areas of Specialization are:
+
+- Agricultural
+- Commercial Lending
+- Mortgage
+- Other Specialized Lending < 1 Billion
+- All Other < 1 Billion
+
+--- .class #id 
+
+## Mississippi Banks Data Products and Statistics
+Sample Output for the "Commercial Lending Banks" (ASSETS, DEPOSITS and EQUITY, in million $)
+
+```{r,echo=FALSE}
+
+data = read.csv("MSBanksDec14.csv")
+banks = data[, c(1, 2, 3, 8, 9, 11, 13, 14)]
+banks$ASSETS = banks$ASSETS/1000
+banks$DEPOSITS = banks$DEPOSITS/1000
+banks$EQUITY = banks$EQUITY/1000
+banks1 = banks[, c(2:8)]
+
+# Subset the data by banks' specialization
+sub1 = banks[banks$SPECGRP == 2, ]
+sub1 = sub1[, c(2:8)]
+sub2 = banks[banks$SPECGRP == 4, ]
+sub2 = sub2[, c(2:8)]
+sub3 = banks[banks$SPECGRP == 5, ]
+sub3 = sub3[, c(2:8)]
+sub4 = banks[banks$SPECGRP == 7, ]
+sub4 = sub4[, c(2:8)]
+sub5 = banks[banks$SPECGRP == 8, ]
+sub5 = sub5[, c(2:8)]
+
+# Generate a summary of the dataset
+dataset = sub2[, 3:7]
+summary(dataset)
+ 
+```
+
+--- .class #id 
+
+### Mississippi Banks Data Products and Statistics
+
+Future Enhancements:
+
+- Add another widget that will allow users to
+  search and choose individual bank's data to display
+- Add another widget that will allow users to
+  choose dates of FDIC data reporting
+
